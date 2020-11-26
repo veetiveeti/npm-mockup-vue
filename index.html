@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>npm mockup</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/828c421a23.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <nav class="header-navigation">
+          <a class="skip" href="#header-hero" role="link" tabindex="0">
+            Skip to Main Content
+          </a>
+          <img src="./assets/npm-logo.svg" alt="npm logo" role="logo" />
+          <ul class="header-navigation-list">
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Resources </a></li>
+            <li><a href="#"> Community </a></li>
+            <li><a href="#"> Support </a></li>
+          </ul>
+        </nav>
+
+        <div class="header-hero" id="header-hero">
+          <h1 class="header-hero-title">Build Amazing Things</h1>
+
+          <p class="header-hero-bodytext">
+            We're npm, Inc., the company behind Node package manager, the npm
+            Registry, and npm CLI. We offer those to the community for free, but
+            our day job is building and selling useful tools for developers like
+            you.
+          </p>
+
+          <button class="header-hero-btn" aria-label="Sign Up for free">
+            Sign Up for free
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <button class="header-hero-btn" aria-label="Learn about Pro">
+            Learn about Pro
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="information">
+        <h2 class="information-title">
+          Bring the best of open source to you, your team, and your company
+        </h2>
+
+        <div class="information-card-container">
+          <div class="information-card" v-for="item in items" :key="item.id">
+            <!-- Renders cards from an object -->
+            <img
+              :src="item.image"
+              :alt="item.altText"
+              class="information-card-img"
+            />
+            <h3 class="information-card-title">{{item.title}}</h3>
+            <p class="information-card-bodytext">{{item.content}}</p>
+            <button
+              class="information-card-btn"
+              aria-label="Read more about Realiability"
+            >
+              Read more
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="references">
+        <h2 class="references-title">
+          Gratefully serving everyone from solo devs to the Fortune 500
+        </h2>
+
+        <div class="references-container">
+          <!--<img src="./assets/references.png" alt="" class="references-img">-->
+        </div>
+      </section>
+
+      <footer>
+        <img src="./assets/npm-footer-logo.svg" />
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <h3 class="footer-nav-list-title">Support</h3>
+            <li><a href="#"> Help </a></li>
+            <li><a href="#"> Community </a></li>
+            <li><a href="#"> Advisories </a></li>
+            <li><a href="#"> Status </a></li>
+            <li><a href="#"> Contact npm </a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <h3 class="footer-nav-list-title">Company</h3>
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Blog </a></li>
+            <li><a href="#"> Press </a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <h3 class="footer-nav-list-title">Terms & Policies</h3>
+            <li><a href="#"> Policies </a></li>
+            <li><a href="#"> Terms of Use </a></li>
+            <li><a href="#"> Code of Conduct </a></li>
+            <li><a href="#"> Privacy </a></li>
+          </ul>
+        </nav>
+      </footer>
+      <div class="footer-bottom-detail"></div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,512 @@
+/*---- Google Fonts ----*/
+
+/* Roboto & Paytone One */
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/*---- All body elements & CSS Reset ----*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+/*---- App Container ----*/
+
+:focus {
+  padding: 0.5em;
+}
+
+/*---- Header ----*/
+
+/* Nav */
+header {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  background-color: #153630;
+  color: #fffbf2;
+  /* Animations when site opens */
+  animation: fadeIn ease-in 0.3s;
+  -webkit-animation: fadeIn ease-in 0.3s;
+  -moz-animation: fadeIn ease-in 0.3s;
+  -o-animation: fadeIn ease-in 0.3s;
+  -ms-animation: fadeIn ease-in 0.3s;
+}
+
+.header-navigation {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 10% 0 10%;
+}
+
+/* Accessibility for Keyboard navigation */
+.skip {
+  display: inline;
+  padding-bottom: 10px;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+  z-index: -999;
+  background-color: white;
+}
+
+.skip:focus {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  overflow: hidden;
+  z-index: 2;
+  border-style: dotted;
+  color: black;
+  padding: 1em;
+  display: inline-block;
+  filter: drop-shadow(0 0 0.75rem rgba(27, 27, 27, 0.432));
+}
+
+/* Logo */
+.header-navigation img {
+  width: 4em;
+}
+
+.header-navigation-list {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  justify-self: end;
+}
+
+.header-navigation-list a {
+  color: #fffbf2;
+  text-decoration: none;
+}
+
+.header-navigation-list a:hover {
+  color: #18fff1;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header-navigation-list a:focus {
+  color: #18fff1;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/* Hero Container */
+.header-hero {
+  padding: 6em 10% 6em 10%;
+  background-image: url(./assets/hero-image.png);
+  background-position: top 10% right 10%;
+  background-repeat: no-repeat;
+}
+
+.header-hero-title {
+  width: 100%;
+  font-family: "Paytone One", sans-serif;
+  font-size: 4em;
+}
+
+.header-hero-bodytext {
+  margin: 2em 0 3em 0;
+  max-width: 40%;
+  line-height: 1.5;
+}
+
+/* Hero Buttons */
+.header-hero-btn {
+  background-color: #153630;
+  padding: 1em 2em 1em 2em;
+  font-family: "Roboto";
+  margin-right: 1em;
+  margin-bottom: 2em;
+  font-size: 15px;
+  color: #18fff1;
+  border: 2px solid #18fff1;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 5px 5px 0;
+  box-shadow: 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Button hover and focus */
+.header-hero-btn:hover {
+  box-shadow: 0px 0px 0px;
+  filter: drop-shadow(0 0 0.75rem rgba(31, 31, 31, 0.11));
+  background-color: #18fff1;
+  color: #153630;
+}
+
+.header-hero-btn:focus {
+  box-shadow: 0px 0px 0px;
+  filter: drop-shadow(0 0 0.75rem rgba(31, 31, 31, 0.11));
+  background-color: #18fff1;
+  color: #153630;
+}
+
+/* Hero Button icon (chevron-right) */
+.header-hero-btn i {
+  margin-left: 1em;
+}
+
+/*---- Information Section ----*/
+
+/* Information Container */
+.information {
+  padding: 0 10% 0 10%;
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  /* Animations when site opens */
+  animation: fadeIn ease-in 0.6s;
+  -webkit-animation: fadeIn ease-in 0.6s;
+  -moz-animation: fadeIn ease-in 0.6s;
+  -o-animation: fadeIn ease-in 0.6s;
+  -ms-animation: fadeIn ease-in 0.6s;
+}
+
+.information-title {
+  font-family: "Paytone One", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 25% 1em 25%;
+}
+
+/*---- Information Cards ----*/
+
+/* Information Card Container */
+.information-card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+/* Individual information card */
+.information-card {
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 6px;
+  background-color: white;
+  max-width: 100%;
+}
+
+/* Image */
+.information-card-img {
+  padding: 0 20% 0 20%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Information Card Title */
+.information-card-title {
+  font-family: "Paytone One", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Information Card Bodytext */
+.information-card-bodytext {
+  margin-bottom: 2em;
+}
+
+/* Information Card Button */
+.information-card-btn {
+  background-color: transparent;
+  padding: 1em 2em 1em 2em;
+  margin-bottom: 1em;
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #000000;
+  border: 2px solid #000000;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 5px 5px 0;
+  box-shadow: 5px 5px 0;
+  cursor: pointer;
+}
+
+.information-card-btn i {
+  margin-left: 1em;
+}
+
+/* Information Card Button Hover & Focus  */
+
+.information-card-btn:hover {
+  box-shadow: 0px 0px 0px;
+  filter: drop-shadow(0 0 0.75rem rgba(31, 31, 31, 0.11));
+  background-color: #000000;
+  color: white;
+}
+
+.information-card-btn:focus {
+  box-shadow: 0px 0px 0px;
+  filter: drop-shadow(0 0 0.75rem rgba(31, 31, 31, 0.11));
+  background-color: #000000;
+  color: white;
+}
+
+/*---- References ----*/
+
+/* References Container */
+.references {
+  padding: 0 10% 0 10%;
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  margin-bottom: 6em;
+}
+
+.references-title {
+  font-family: "Paytone One", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 25% 1em 25%;
+}
+
+.references-container {
+  background-image: url(./assets/references.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  padding: 2em;
+}
+
+/*---- Footer ----*/
+
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  border-top: solid 1px black;
+  height: fit-content;
+  padding: 4em 10% 4em 10%;
+}
+
+/* Footer Logo */
+footer img {
+  width: 40px;
+}
+
+/* Footer Nav */
+.footer-nav {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Footer Nav Lists */
+.footer-nav-list {
+  list-style: none;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.footer-nav-list-title {
+  font-family: "Paytone One", "Roboto", sans-serif;
+  margin-bottom: 1em;
+}
+
+.footer-nav-list li a {
+  text-decoration: none;
+  color: #000000;
+  line-height: 2;
+}
+
+.footer-nav-list li a:hover {
+  color: #5a5a5a;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer-nav-list li a:focus {
+  color: #5a5a5a;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/* Footer Bottom detail line */
+.footer-bottom-detail {
+  width: 100%;
+  height: 10px;
+  background-color: #18fff0;
+}
+
+/*-------- MEDIA QUERIES FOR MEDIUM (TABLET) BREAKPOINTS --------*/
+
+@media only screen and (max-width: 900px) {
+  /* Hero */
+  .header-hero {
+    padding: 6em 10% 6em 10%;
+    background-image: url(./assets/hero-image.png);
+    background-position: top 200px left 200px;
+    background-repeat: no-repeat;
+  }
+
+  .header-hero-bodytext {
+    margin: 2em 0 3em 0;
+    max-width: 80%;
+  }
+
+  /*---- Information Cards ----*/
+
+  /* Information Card container */
+  .information-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*-------- MEDIA QUERIES FOR SMALL (MOBILE) BREAKPOINTS --------*/
+
+@media only screen and (max-width: 660px) {
+  /* Navigation*/
+  .header-navigation-list {
+    gap: 1em;
+  }
+
+  /* Hero */
+  .header-hero {
+    padding: 3em 10% 2em 10%;
+    background-image: url(./assets/hero-image.png);
+    background-position: top 200px left 200px;
+    background-repeat: no-repeat;
+  }
+
+  .header-hero-title {
+    width: 100%;
+    font-family: "Paytone One", sans-serif;
+    font-size: 3em;
+    line-height: 1.2;
+  }
+
+  .header-hero-bodytext {
+    margin: 2em 0 3em 0;
+    max-width: 100%;
+  }
+
+  /* Hero Buttons */
+  .header-hero-btn {
+    width: 100%;
+  }
+
+  /*---- Information Cards ----*/
+
+  /* Title */
+  .information-title {
+    padding: 2em 0 1em 0;
+    line-height: 1.2;
+    margin-bottom: 1em;
+  }
+
+  /* Information Card container */
+  .information-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .information-card {
+    padding: 0;
+  }
+
+  /*---- References ----*/
+
+  /* Title */
+  .references {
+    margin-bottom: 4em;
+  }
+
+  /* Title */
+  .references-title {
+    padding: 0 0 1em 0;
+    line-height: 1.2;
+  }
+
+  /* References Image Container */
+  .references-container {
+    height: 200px;
+    padding: 2em;
+  }
+
+  /*---- Footer ----*/
+
+  footer {
+    padding: 2em 5% 4em 5%;
+    grid-template-columns: 10% 90%;
+  }
+
+  footer img {
+    width: 30px;
+  }
+
+  .footer-nav {
+    margin-left: 3em;
+    justify-items: left;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/* Keyframes for fadeIn animation */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
