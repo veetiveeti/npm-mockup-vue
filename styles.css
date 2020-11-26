@@ -425,7 +425,13 @@ footer img {
 
   .information-card {
     padding: 0;
+    margin-bottom: 1em;
   }
+
+  /* Information Card Button */
+.information-card-btn {
+  width: 100%;
+}
 
   /*---- References ----*/
 

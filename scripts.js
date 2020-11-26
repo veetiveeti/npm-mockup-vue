@@ -7,7 +7,7 @@ var app = new Vue({
           id: 0,
           image: "./assets/02.png",
           altText: "Multiple hands poking out of a rubber ball",
-          title: "Realiability",
+          title: "Reliability",
           content:
             "Relied upon by more than 11 million developers worldwide, npm is committed to making JavaScript development elegant, productive, and safe.",
         },
@@ -15,9 +15,9 @@ var app = new Vue({
           id: 1,
           image: "./assets/07.png",
           altText: "Many collected lightbulbs",
-          title: "We 🤍 Open Source",
+          title: "We ❤ Open Source",
           content:
-            "We're proud to dedicate teams of full-time employees to operating the npm Registry,and other projects that support and nurture a vibrant open source community.",
+            "We're proud to dedicate teams of full-time employees to operating the npm Registry, and other projects that support and nurture a vibrant open source community.",
         },
         {
           id: 2,
